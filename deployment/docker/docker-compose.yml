@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ../../backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DEVICE=cpu # Use 'cuda' for GPU if configured
+    volumes:
+      - ../../backend:/app
+      # Map models directory to host if downloading takes time
+      - ../../ml/models:/app/models
+    networks:
+      - translate_net
+
+  frontend:
+    build:
+      context: ../../frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4000:80"
+    depends_on:
+      - backend
+    networks:
+      - translate_net
+
+networks:
+  translate_net:
+    driver: bridge
