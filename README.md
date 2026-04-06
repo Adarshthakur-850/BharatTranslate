@@ -1,4 +1,5 @@
 # BharatTranslate
+<<<<<<< HEAD
 
 BharatTranslate is a production-ready AI-powered Multilingual Translation System that supports 22 official Indian languages. It uses FastAPI for the backend, React+Tailwind for a high-performance frontend, and provides integration logic for Transformer-based models like `IndicTrans2` or `mBART`.
 
@@ -17,3 +18,6 @@ Check out `docs/setup_guide.md` for full installation instructions.
 ## Supported Languages
 
 Hindi, Bengali, Tamil, Telugu, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Odia, Assamese, Urdu, Sanskrit, Kashmiri, Konkani, Sindhi, Manipuri, Bodo, Dogri, Maithili, Santhali, Nepali, and English.
+=======
+ml project
+>>>>>>> ac64a08fe561769ddc6ab5f5637e0f7a4fa14201
